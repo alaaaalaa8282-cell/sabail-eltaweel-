@@ -1,4 +1,4 @@
-# Sabail – Islamic Companion App
+# Sabail-eltaweel – Islamic Companion App
 
 **Sabail** is a Flutter-based mobile application offering a suite of useful tools for Muslims around the world:
 
