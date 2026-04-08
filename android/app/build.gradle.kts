@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.sabail"
+    namespace = "com.example.sabail-eltaweel "
     compileSdk = flutter.compileSdkVersion
 
     // Override NDK version to match plugin requirements (path_provider_android needs 27.0.12077973)
@@ -23,7 +23,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.sabail"
+        applicationId = "com.example.sabail-eltaweel "
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = 3
