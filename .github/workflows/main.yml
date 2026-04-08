@@ -1,7 +1,9 @@
 name: Build Android APK
 
 on:
-  workflow_dispatch: # يتيح لك تشغيل البناء يدوياً
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -24,4 +26,3 @@ jobs:
         with:
           name: my-app-apk
           path: app/build/outputs/apk/debug/*.apk
-
