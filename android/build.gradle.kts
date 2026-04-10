@@ -31,20 +31,24 @@ subprojects {
     }
 }
 
-subprojects {
+
+// الكود الثاني: اجبر كل Android plugins تستخدم Java 17
+allprojects {
     pluginManager.withPlugin("com.android.library") {
-        // ضبط إعدادات الـ Android Library (بتشمل Java و Kotlin)
-        configure<com.android.build.gradle.LibraryExtension> {
+        extensions.configure<com.android.build.gradle.LibraryExtension> {
             compileOptions {
                 sourceCompatibility = JavaVersion.VERSION_17
                 targetCompatibility = JavaVersion.VERSION_17
             }
         }
-        // التأكد من أن الـ Kotlin Compiler مضبوط على 17
-        tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-            compilerOptions {
-                jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
-            }
+    }
+}
+    }
+}
+subprojects {
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
         }
     }
 }
