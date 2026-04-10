@@ -12,6 +12,7 @@ subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 }
+
 subprojects {
     project.evaluationDependsOn(":app")
 }
@@ -26,18 +27,6 @@ subprojects {
                     useVersion("2.1.0")
                     because("Force modern Kotlin plugin for all modules")
                 }
-            }
-        }
-    }
-}
-
-
-subprojects {
-    afterEvaluate {
-        project.extensions.findByType(com.android.build.gradle.BaseExtension::class.java)?.apply {
-            compileOptions {
-                sourceCompatibility = JavaVersion.VERSION_17
-                targetCompatibility = JavaVersion.VERSION_17
             }
         }
     }
