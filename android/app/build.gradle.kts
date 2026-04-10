@@ -15,10 +15,6 @@ android {
         isCoreLibraryDesugaringEnabled = true
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-
     defaultConfig {
         applicationId = "com.sabaileltaweel.app"
         minSdk = flutter.minSdkVersion
@@ -32,6 +28,10 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 dependencies {
