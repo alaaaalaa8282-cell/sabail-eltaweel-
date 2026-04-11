@@ -34,8 +34,16 @@ jobs:
       - name: Build APK
         run: flutter build apk --release --split-per-abi
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - name: Create Release and Upload APK
+        uses: softprops/action-gh-release@v1
         with:
-          name: sabeel-apk
-          path: build/app/outputs/flutter-apk/*.apk
+          tag_name: v1.0.${{ github.run_number }}
+          name: سبيل الطويل v1.0.${{ github.run_number }}
+          body: |
+            مواقيت الصلاة
+            اذكار
+            قرآن
+            قبلة
+          files: build/app/outputs/flutter-apk/*.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
