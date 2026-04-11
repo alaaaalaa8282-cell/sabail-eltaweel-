@@ -1,4 +1,4 @@
-package com.sabaileltaweel.app.notifications
+package com.example.sabail.notifications
 
 import android.app.AlarmManager
 import android.app.Notification
@@ -13,8 +13,8 @@ import android.net.Uri
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.sabaileltaweel.app.MainActivity
-import com.sabaileltaweel.app.R
+import com.examplesabail.MainActivity
+import com.example.sabail.R
 import org.json.JSONArray
 
 object AzanNotificationScheduler {
