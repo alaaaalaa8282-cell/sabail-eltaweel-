@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.sabaileltaweel.app"
+    namespace = "com.example.sabail"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
 
@@ -16,7 +16,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.sabaileltaweel.app"
+        applicationId = "com.example.sabail"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = 3
