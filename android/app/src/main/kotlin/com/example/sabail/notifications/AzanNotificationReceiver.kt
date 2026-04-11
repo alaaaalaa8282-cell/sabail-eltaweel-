@@ -1,4 +1,4 @@
-package com.sabaileltaweel.app.notifications
+package com.example.sabail.notifications
 
 import android.content.BroadcastReceiver
 import android.content.Context
