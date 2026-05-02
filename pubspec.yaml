@@ -49,7 +49,8 @@ dependencies:
   adhan: ^1.2.2
   quran: ^3.1.1
   flutter_qiblah: ^2.1.1
-dev_dependencies:
+
+  dev_dependencies:
   flutter_test:
     sdk: flutter
 
